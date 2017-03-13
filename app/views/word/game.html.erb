@@ -1,0 +1,10 @@
+<h2>Here is your grid:</h2>
+<%= @grid.join('') %>
+
+<h3>What's your best shot:</h3>
+  <form action="/score">
+    <input type="text" id="answer" name="answer" placeholder="Best shot?">
+    <input type="hidden" name="time_start" value="<%= Time.now %>">
+    <input type="hidden" name="grid" value="<%= @grid.join("") %>">
+    <input type="submit" value="Go on!">
+  </form>
